@@ -10,14 +10,17 @@ while True:
     if op==1:
         print(f"asientos disponibles: {asientos}")
     elif op==2:
-        rut =int(input("ingresa tu rut para comprar: "))
-        compra = int(input("ingresa el asiento que desea comprar: "))
-        if compra in asientos:
+        try:
+            rut =int(input("ingresa tu rut para comprar: "))
+            compra = int(input("ingresa el asiento que desea comprar: "))
+            if compra in asientos:
                 asientos.remove(compra)
-                pasajeros.append("rut: ",rut,"asiento:",compra) 
+                pasajeros.append({"rut: ",rut,"asiento:",compra}) 
                 print(f"la compra a sido realizada con exito")
-        else:
-             break
+            else:
+                break
+        except ValueError:
+            print("ingrese datos validos")
     elif op==3:
          print("pasajeros registrados")
          print(pasajeros)
