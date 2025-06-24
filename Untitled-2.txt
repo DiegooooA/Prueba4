@@ -14,4 +14,4 @@ while True:
         compra = int(input("ingresa el asiento que desea comprar: "))
         if compra in asientos:
                 asientos.remove(compra)
-                pasajeros.append({"rut: ",rut,"asiento:",as}) 
+                pasajeros.append({"rut: ",rut,"asiento:",as}) ss
